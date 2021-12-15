@@ -2,7 +2,7 @@
 Descobrir o formato de um arquivo de imagem (jpeg, png, bmp, gif e tiff) sem saber a extensão. Apenas analisando o conteúdo do mesmo.
 
 ### Como funciona
-O programa foi feito Linguagem Ansi-C, C#, Java e Delphi.
+O programa foi feito Linguagem Ansi-C, C#, Java, Delphi, PHP e Python.
 Basta abrir o arquivo em formato binário e analisar os primeiros bytes. As regras são:
 
 Sequencia em decimal | Formato | Observação
