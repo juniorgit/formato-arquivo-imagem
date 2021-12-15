@@ -24,7 +24,7 @@ int main(int argc,char *argv[])
     fread(buffer,sizeof(buffer),1,ptr);
     fclose(ptr);
 
-	// analisa o primeiro byte do arquivo, conforme ele sabemos o tipo
+    // analisa o primeiro byte do arquivo, conforme ele sabemos o tipo
     switch (buffer[0])
     {
       case 0x89: // 137
