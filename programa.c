@@ -2,11 +2,11 @@
 
 int main(int argc,char *argv[])
 {
-	// nao passou parametro, exibe mensagem e sai fora
-	if (argc == 1) {
-		printf("Faltou parametro (nome do arquivo de imagem)");
-		return 1;
-	}
+    // nao passou parametro, exibe mensagem e sai fora
+    if (argc == 1) {
+	printf("Faltou parametro (nome do arquivo de imagem)");
+	return 1;
+    }
 
     unsigned char buffer[1];
     FILE *ptr;
@@ -14,15 +14,15 @@ int main(int argc,char *argv[])
     // r = leitura e b = binario
     ptr = fopen(argv[1],"rb");
 
-	// erro na leitura do arquivo, nao existe?
-	if (ptr == NULL) {
-		printf("Falha ao abrir %s (nao existe?)", argv[1]);
-		return 2;
-	}
+    // erro na leitura do arquivo, nao existe?
+    if (ptr == NULL) {
+	printf("Falha ao abrir %s (nao existe?)", argv[1]);
+        return 2;
+    }
 
-	// faz a leitura do primeiro byte
+    // faz a leitura do primeiro byte
     fread(buffer,sizeof(buffer),1,ptr);
-	fclose(ptr);
+    fclose(ptr);
 
 	// analisa o primeiro byte do arquivo, conforme ele sabemos o tipo
     switch (buffer[0])
@@ -51,5 +51,5 @@ int main(int argc,char *argv[])
         printf("%s", "Formato desconhecido");
     }
 
-	return 0;
+  return 0;
 }
